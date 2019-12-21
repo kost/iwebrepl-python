@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="iwebrepl",
-    version="0.1.0",
+    version="0.2.0",
     author="Vlatko Kosturjak",
     author_email="vlatko.kosturjak@gmail.com",
     description="Client to handle micropython web_repl interactively",
