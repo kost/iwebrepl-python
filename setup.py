@@ -16,7 +16,6 @@ setuptools.setup(
     install_requires=[
         "websocket-client",
         "prompt_toolkit",
-        "getpass"
     ],
     classifiers=[
         "Programming Language :: Python :: 2",
