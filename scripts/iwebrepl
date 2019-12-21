@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # based on webrepl client from carlosgilgonzalez, Hermann-SW and aivarannamaa
 # github.com/kost/iwebrepl-python
 
@@ -6,7 +6,6 @@ from time import sleep
 import os
 import sys
 import websocket
-import asyncio
 import argparse
 
 from prompt_toolkit import PromptSession
@@ -15,6 +14,11 @@ from prompt_toolkit.auto_suggest import ConditionalAutoSuggest
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.filters import Condition
 
+asyncenabled=True
+try:
+    import asyncio
+except ImportError:
+    asyncenabled=False
 
 # KEYPRESS EVENTS
 
@@ -550,10 +554,12 @@ def on_open(ws):
         global exit_flag
         global received
         global args
+        global asyncenabled
         running = True
         injected = False
 
-        asyncio.set_event_loop(asyncio.new_event_loop())
+        if asyncenabled:
+          asyncio.set_event_loop(asyncio.new_event_loop())
 
         sys.stdout.write(
             "Keyboard: Ctrl-x to exit, Ctrl-d softreboot, Ctrl-k display help\r\n\r\n")

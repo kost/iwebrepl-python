@@ -7,7 +7,7 @@ Python module to handle micropython websocket (WS) repl protocol interactively. 
 Requirements
 ============
 
-It should work with both python2 and python3 with simple pip commands:
+It should work with python3 with simple pip commands:
 ```
 pip install iwebrepl
 ```
@@ -100,7 +100,7 @@ Custom keybindings:
 Complete Requirements
 ============
 
-It should work with both python2 and python3 with simple pip commands:
+It should work with python3 with simple pip commands:
 ```
 sudo apt-get update
 sudo apt-get install -y python3 python3-pip
