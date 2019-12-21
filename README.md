@@ -106,3 +106,10 @@ sudo apt-get update
 sudo apt-get install -y python3 python3-pip
 sudo pip3 install iwebrepl
 ```
+
+Credits
+======
+
+Copyright (C) 2019. Kost.
+Based on webrepl client from carlosgilgonzalez, Hermann-SW and aivarannamaa.
+
